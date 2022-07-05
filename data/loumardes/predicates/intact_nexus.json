@@ -1,0 +1,82 @@
+[
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "position": {
+            "y": {
+              "min": -62,
+              "max": 317
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": 0,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "tag": "loumardes:railrush/nexus"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 1,
+      "offsetY": 0,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "tag": "loumardes:railrush/nexus"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 0,
+      "offsetY": -1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "tag": "loumardes:railrush/nexus"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 0,
+      "offsetY": 1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "tag": "loumardes:railrush/nexus"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 0,
+      "offsetY": 0,
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "tag": "loumardes:railrush/nexus"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 0,
+      "offsetY": 0,
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "tag": "loumardes:railrush/nexus"
+        }
+      }
+    }
+  ]

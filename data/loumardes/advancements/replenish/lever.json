@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "scaffolding placed": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": {},
+        "block": "minecraft:lever"
+      }
+    }
+  },
+  "rewards": {
+    "function": "loumardes:railrush/item/replenish/lever"
+  },
+  "parent": "loumardes:replenish"
+}

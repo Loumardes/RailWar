@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "scaffolding placed": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": {},
+        "block": "minecraft:white_wool"
+      }
+    }
+  },
+  "rewards": {
+    "function": "loumardes:railrush/item/replenish/white_wool"
+  },
+  "parent": "loumardes:replenish"
+}

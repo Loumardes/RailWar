@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "scaffolding placed": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": {},
+        "block": "minecraft:red_wool"
+      }
+    }
+  },
+  "rewards": {
+    "function": "loumardes:railrush/item/replenish/red_wool"
+  },
+  "parent": "loumardes:replenish"
+}

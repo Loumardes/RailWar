@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "scaffolding placed": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": {},
+        "block": "minecraft:powered_rail"
+      }
+    }
+  },
+  "rewards": {
+    "function": "loumardes:railrush/item/replenish/powered_rail"
+  },
+  "parent": "loumardes:replenish"
+}

@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "scaffolding placed": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": {},
+        "block": "minecraft:activator_rail"
+      }
+    }
+  },
+  "rewards": {
+    "function": "loumardes:railrush/item/replenish/activator_rail"
+  },
+  "parent": "loumardes:replenish"
+}
