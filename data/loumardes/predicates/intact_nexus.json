@@ -1,19 +1,5 @@
 [
     {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "location": {
-          "position": {
-            "y": {
-              "min": -62,
-              "max": 317
-            }
-          }
-        }
-      }
-    },
-    {
       "condition": "minecraft:location_check",
       "offsetX": -1,
       "offsetY": 0,
