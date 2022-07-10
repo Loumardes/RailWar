@@ -8,6 +8,12 @@ tag @e[type=marker,tag=RW_gold_spawner] add RW_Check_Cart
 execute as @e[type=chest_minecart,tag=GoldCart] run function loumardes:railrush/ressources/check_cart
 execute as @e[type=marker,tag=RW_Check_Cart] at @s run function loumardes:railrush/ressources/spawn_cart
 
+#adds collected carts to score
+execute positioned 5000.5 1 64.5 if entity @e[type=chest_minecart,tag=GoldCart,distance=..0.5,limit=1] run scoreboard players add Blue gold 1
+execute positioned 5000.5 1 64.5 run kill @e[type=chest_minecart,tag=GoldCart,distance=..0.5,limit=1]
+execute positioned 5000.5 1 -63.5 if entity @e[type=chest_minecart,tag=GoldCart,distance=..0.5,limit=1] run scoreboard players add Red gold 1
+execute positioned 5000.5 1 -63.5 run kill @e[type=chest_minecart,tag=GoldCart,distance=..0.5,limit=1]
+
 #checks nexus integrity
 execute positioned 5000 4 64 unless predicate loumardes:intact_nexus run tellraw @a[] ["",{"text":"[RW] ","color":"gold"},{"text":"☠ Team ","color":"gray"},{"text":"Blue ","color":"blue"},{"text":"Eliminated ☠","color":"gray"}]
 execute positioned 5000 4 -64 unless predicate loumardes:intact_nexus run tellraw @a[] ["",{"text":"[RW] ","color":"gold"},{"text":"☠ Team ","color":"gray"},{"text":"Red ","color":"red"},{"text":"Eliminated ☠","color":"gray"}]
