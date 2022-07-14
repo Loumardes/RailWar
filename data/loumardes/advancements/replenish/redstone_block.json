@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "scaffolding placed": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": {},
+        "block": "minecraft:redstone_block"
+      }
+    }
+  },
+  "rewards": {
+    "function": "loumardes:railrush/item/replenish/redstone_block"
+  },
+  "parent": "loumardes:replenish"
+}

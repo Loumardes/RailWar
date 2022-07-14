@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "scaffolding placed": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": {},
+        "block": "minecraft:detector_rail"
+      }
+    }
+  },
+  "rewards": {
+    "function": "loumardes:railrush/item/replenish/detector_rail"
+  },
+  "parent": "loumardes:replenish"
+}
