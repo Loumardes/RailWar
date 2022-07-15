@@ -1,3 +1,7 @@
+#Handle all game logic while it is running
+
+#set off the tnt minecart is it contacts fire (invulnerable makes it immune)
+execute as @e[type=tnt_minecart] at @s if block ~ ~ ~ fire run data merge entity @s {TNTFuse:0}
 
 #replace destroyed tnt minecarts
 execute unless entity @e[type=tnt_minecart,tag=blue,limit=1] if entity @r run summon tnt_minecart 5000 1 64 {Invulnerable:true,Tags:["blue"]}
