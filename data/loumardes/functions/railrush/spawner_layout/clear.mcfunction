@@ -1,0 +1,1 @@
+execute as @e[type=marker,tag=RW_gold_spawner] at @s run function loumardes:railrush/ressources/remove_spawner
