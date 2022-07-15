@@ -17,7 +17,7 @@ spawnpoint @a[team=red] 5000 1 -70 0
 #set all players without a team spectator
 gamemode spectator @a[team=]
 #and put all spectators in the middle
-tp @a[gamemode=spectator] 5070 1 70 90 ~
+tp @a[gamemode=spectator] 5070 1 0 90 ~
 
 gamemode survival @a[gamemode=!spectator]
 
