@@ -24,10 +24,7 @@ execute positioned 5000.5 1 -63.5 at @e[type=chest_minecart,tag=GoldCart,dx=0,dy
 execute positioned 5000.5 1 -63.5 run kill @e[type=chest_minecart,tag=GoldCart,dx=0,dy=0,dz=0,limit=1]
 
 #checks nexus integrity
-execute positioned 5000 4 64 unless predicate loumardes:intact_nexus run tellraw @a[] ["",{"text":"[RW] ","color":"gold"},{"text":"☠ Team ","color":"gray"},{"text":"Blue ","color":"blue"},{"text":"Eliminated ☠","color":"gray"}]
-execute positioned 5000 4 -64 unless predicate loumardes:intact_nexus run tellraw @a[] ["",{"text":"[RW] ","color":"gold"},{"text":"☠ Team ","color":"gray"},{"text":"Red ","color":"red"},{"text":"Eliminated ☠","color":"gray"}]
+execute as @e[type=marker,tag=crystal] at @s unless predicate loumardes:intact_nexus run tag @s add destroyed
+execute unless entity @e[type=marker,tag=blue_crystal,tag=!destroyed] run function loumardes:railrush/blue_team_eliminated
+execute unless entity @e[type=marker,tag=red_crystal,tag=!destroyed] run function loumardes:railrush/red_team_eliminated
 
-execute positioned 5000 4 64 unless predicate loumardes:intact_nexus run scoreboard players set GameRunning Constant 0
-execute positioned 5000 4 -64 unless predicate loumardes:intact_nexus run scoreboard players set GameRunning Constant 0
-execute positioned 5000 4 64 unless predicate loumardes:intact_nexus run gamemode creative @a
-execute positioned 5000 4 -64 unless predicate loumardes:intact_nexus run gamemode creative @a
