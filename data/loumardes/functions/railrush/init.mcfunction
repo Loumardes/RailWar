@@ -1,5 +1,8 @@
 
 scoreboard objectives add Constant dummy
+scoreboard objectives add Process dummy
+
+scoreboard objectives add Click used:carrot_on_a_stick
 
 scoreboard objectives add gold dummy ["",{"text":"Gold ","color":"gold"}]
 scoreboard objectives add iron dummy

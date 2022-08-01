@@ -16,6 +16,8 @@ give @s lever 1
 
 give @s iron_pickaxe{Unbreakable:1} 1
 
+give @s carrot_on_a_stick 1
+
 item replace entity @s[team=red] armor.head with leather_helmet{Unbreakable:1,display:{color:13697026}} 1 
 item replace entity @s[team=red] armor.chest with leather_chestplate{Unbreakable:1,display:{color:13697026}} 1 
 item replace entity @s[team=red] armor.legs with leather_leggings{Unbreakable:1,display:{color:13697026}} 1 
