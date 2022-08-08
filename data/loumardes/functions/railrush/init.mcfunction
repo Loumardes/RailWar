@@ -6,6 +6,7 @@ scoreboard objectives add Click used:carrot_on_a_stick
 
 scoreboard objectives add gold dummy ["",{"text":"Gold ","color":"gold"}]
 scoreboard objectives add iron dummy
+scoreboard objectives add tech dummy
 
 scoreboard objectives add RW_spawner_id dummy
 

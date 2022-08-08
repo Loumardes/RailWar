@@ -5,6 +5,8 @@ scoreboard players set Blue gold 0
 scoreboard players set Red gold 0
 scoreboard players set Blue iron 0
 scoreboard players set Red iron 0
+scoreboard players set Blue tech 1
+scoreboard players set Red tech 1
 team join blue Blue
 team join red Red
 team modify blue color blue
@@ -30,5 +32,8 @@ execute as @a[gamemode=!spectator] run function loumardes:railrush/item/starting
 execute as @e[type=marker,tag=blue_crystal] at @s run function loumardes:railrush/bases/repair_blue_crystal
 execute as @e[type=marker,tag=red_crystal] at @s run function loumardes:railrush/bases/repair_red_crystal
 tag @e[type=marker,tag=crystal] remove destroyed
+
+#secure item frames
+execute as @e[type=minecraft:item_frame] run data modify entity @s {} merge value {Invulnerable:1,Fixed:1}
 
  

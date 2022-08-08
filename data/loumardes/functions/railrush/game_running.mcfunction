@@ -26,6 +26,9 @@ execute as @e[type=marker,tag=red_ressource_collector] at @s if entity @e[type=c
 execute as @e[type=marker,tag=ressource_collector] at @s at @e[type=chest_minecart,tag=IronCart,dx=0,dy=0,dz=0,limit=1] run particle block iron_bars ~ ~ ~ 0.5 0.5 0.5 4 40 normal
 execute as @e[type=marker,tag=ressource_collector] at @s run kill @e[type=chest_minecart,tag=IronCart,dx=0,dy=0,dz=0,limit=1]
 
+#upgrade gear if a team brought enough iron
+execute if score Blue iron = Blue tech run function loumardes:railrush/item/gear/upgrade_blue
+execute if score Red iron = Red tech run function loumardes:railrush/item/gear/upgrade_red
 
 #checks nexus integrity
 execute as @e[type=marker,tag=crystal] at @s unless predicate loumardes:intact_nexus run tag @s add destroyed
