@@ -4,8 +4,6 @@
 execute unless entity @e[type=chest_minecart,tag=blue,limit=1] as @e[type=marker,tag=blue_tnt_spawner] at @s run summon chest_minecart ~ ~ ~ {Invulnerable:true,Tags:["TNTcart","blue"],CustomDisplayTile:1,DisplayState:{Name:"minecraft:tnt"},DisplayOffset:6}
 execute unless entity @e[type=chest_minecart,tag=red,limit=1] as @e[type=marker,tag=red_tnt_spawner] at @s run summon chest_minecart ~ ~ ~ {Invulnerable:true,Tags:["TNTcart","red"],CustomDisplayTile:1,DisplayState:{Name:"minecraft:tnt"},DisplayOffset:6}
 
-setblock ~ ~ ~ chest{Lock:"ok"} destroy 
-
 
 #destroy gold carts stepping on powered activator rails
 execute as @e[type=chest_minecart,tag=GoldCart] at @s if block ~ ~ ~ activator_rail[powered=true] run function loumardes:railrush/destroy_goldcart
