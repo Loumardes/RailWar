@@ -3,6 +3,9 @@ scoreboard objectives add Constant dummy
 scoreboard objectives add Process dummy
 
 scoreboard objectives add TNTFuse dummy
+scoreboard objectives add FallDistance dummy
+scoreboard objectives add MotionX dummy
+scoreboard objectives add MotionZ dummy
 
 scoreboard objectives add Click used:carrot_on_a_stick
 

@@ -1,11 +1,6 @@
-#decrement tnt cart fuse
-execute as @e[type=command_block_minecart, tag=TNTcart] if score @s TNTFuse matches -2147483648..2147483647 run scoreboard players remove @s TNTFuse 1
 
-#set off the tnt cart if it's fuse ran out
-execute as @e[type=command_block_minecart, tag=TNTcart] if score @s TNTFuse matches 0 at @s run function loumardes:railrush/detonate_tntcart
-
-#set off the tnt cart if it contacts fire (invulnerable makes it immune)
-execute as @e[type=command_block_minecart, tag=TNTcart] at @s if block ~ ~ ~ fire run function loumardes:railrush/detonate_tntcart
+#handles all detonation cases of the tnt cart
+execute as @e[type=command_block_minecart, tag=TNTcart] at @s run function loumardes:railrush/tntcart_trigger
 
 #moves players from worldspawn to lobby
 execute positioned 0 0 0 run tp @a[distance=..5] -5000 1 0
