@@ -1,8 +1,8 @@
 #Handle all game logic while it is running
 
 #replace destroyed tnt minecarts
-execute unless entity @e[type=chest_minecart,tag=blue,limit=1] as @e[type=marker,tag=blue_tnt_spawner] at @s run summon chest_minecart ~ ~ ~ {Invulnerable:true,Tags:["TNTcart","blue"],CustomDisplayTile:1,DisplayState:{Name:"minecraft:tnt"},DisplayOffset:6}
-execute unless entity @e[type=chest_minecart,tag=red,limit=1] as @e[type=marker,tag=red_tnt_spawner] at @s run summon chest_minecart ~ ~ ~ {Invulnerable:true,Tags:["TNTcart","red"],CustomDisplayTile:1,DisplayState:{Name:"minecraft:tnt"},DisplayOffset:6}
+execute unless entity @e[type=command_block_minecart,tag=blue,limit=1] as @e[type=marker,tag=blue_tnt_spawner] at @s run summon command_block_minecart ~ ~ ~ {Invulnerable:true,Tags:["TNTcart","blue"],CustomDisplayTile:1,DisplayState:{Name:"minecraft:tnt"},DisplayOffset:6}
+execute unless entity @e[type=command_block_minecart,tag=red,limit=1] as @e[type=marker,tag=red_tnt_spawner] at @s run summon command_block_minecart ~ ~ ~ {Invulnerable:true,Tags:["TNTcart","red"],CustomDisplayTile:1,DisplayState:{Name:"minecraft:tnt"},DisplayOffset:6}
 
 
 #destroy gold carts stepping on powered activator rails
