@@ -1,3 +1,12 @@
+#decrement tnt cart fuse
+execute as @e[type=chest_minecart, tag=TNTcart] if score @s TNTFuse matches -2147483648..2147483647 run scoreboard players remove @s TNTFuse 1
+
+#set off the tnt cart if it's fuse ran out
+execute as @e[type=chest_minecart, tag=TNTcart] if score @s TNTFuse matches 0 at @s run function loumardes:railrush/detonate_tntcart
+
+#set off the tnt cart if it contacts fire (invulnerable makes it immune)
+execute as @e[type=chest_minecart, tag=TNTcart] at @s if block ~ ~ ~ fire run function loumardes:railrush/detonate_tntcart
+
 #moves players from worldspawn to lobby
 execute positioned 0 0 0 run tp @a[distance=..5] -5000 1 0
 
@@ -13,7 +22,7 @@ scoreboard players reset @a Click
 #display particles on primed minecart (minecarts are affiched one tick behind their actual location)
 scoreboard players add @e[type=marker,tag=PrimedCartParticles] Process 1
 execute as @e[type=marker,tag=PrimedCartParticles] if score @s Process matches 5.. at @s run function loumardes:railrush/particles/primedcart
-execute at @e[type=tnt_minecart,nbt=!{TNTFuse:-1}] run summon marker ~ ~ ~ {Tags:["PrimedCartParticles"]}
+execute at @e[type=chest_minecart, tag=TNTcart] if score @s TNTFuse matches -2147483648..2147483647 run summon marker ~ ~ ~ {Tags:["PrimedCartParticles"]}
 #starts the game if someone runs the command
 execute if entity @a[scores={startGame=1..2147483647}] run function loumardes:railrush/startgame
 scoreboard players reset @a startGame

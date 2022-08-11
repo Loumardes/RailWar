@@ -1,8 +1,24 @@
-redstone blocs à l'achat
 
+
+
+
+PRIORITE :
+minecart sans friendly fire (cristal)
+allumage seulement du wagonnet de son équipe
+
+IMPORTANT :
+kill par explosion rapporte de l'or
+transforrmer l'or n'en fais pas respawner
 catapulte slime
+l'armure du kit est du bon tier
+
+SECONDAIRE :
+unlimited lever activation tool
+redstone blocs à l'achat ?
+
+COLLABORATIONS : 
+Soundtrack
+Aeris one s'en occupe
 
 build mine warrio
 baronduscotch fais le build
-
-minecart sans friendly fire ?
