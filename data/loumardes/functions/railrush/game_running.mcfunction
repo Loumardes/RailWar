@@ -1,11 +1,9 @@
 #Handle all game logic while it is running
 
-#set off the tnt minecart if it contacts fire (invulnerable makes it immune)
-execute as @e[type=tnt_minecart] at @s if block ~ ~ ~ fire run data merge entity @s {TNTFuse:0}
-
 #replace destroyed tnt minecarts
-execute unless entity @e[type=tnt_minecart,tag=blue,limit=1] as @e[type=marker,tag=blue_tnt_spawner] at @s run summon tnt_minecart ~ ~ ~ {Invulnerable:true,Tags:["blue"]}
-execute unless entity @e[type=tnt_minecart,tag=red,limit=1] as @e[type=marker,tag=red_tnt_spawner] at @s run summon tnt_minecart ~ ~ ~ {Invulnerable:true,Tags:["red"]}
+execute unless entity @e[type=command_block_minecart,tag=blue,limit=1] as @e[type=marker,tag=blue_tnt_spawner] at @s run summon command_block_minecart ~ ~ ~ {Invulnerable:true,Tags:["TNTcart","blue"],CustomDisplayTile:1,DisplayState:{Name:"minecraft:tnt"},DisplayOffset:6}
+execute unless entity @e[type=command_block_minecart,tag=red,limit=1] as @e[type=marker,tag=red_tnt_spawner] at @s run summon command_block_minecart ~ ~ ~ {Invulnerable:true,Tags:["TNTcart","red"],CustomDisplayTile:1,DisplayState:{Name:"minecraft:tnt"},DisplayOffset:6}
+
 
 #destroy gold carts stepping on powered activator rails
 execute as @e[type=chest_minecart,tag=GoldCart] at @s if block ~ ~ ~ activator_rail[powered=true] run function loumardes:railrush/destroy_goldcart
