@@ -17,5 +17,8 @@ scoreboard objectives add RW_spawner_id dummy
 
 scoreboard objectives add startGame trigger
 
+
+scoreboard players set -1 Constant -1
+
 team add red
 team add blue
