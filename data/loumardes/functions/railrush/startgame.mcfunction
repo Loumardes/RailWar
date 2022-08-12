@@ -12,11 +12,14 @@ team join red Red
 team modify blue color blue
 team modify red color red
 
-tp @a[team=blue] 5000 1 70 180 ~
-spawnpoint @a[team=blue] 5000 1 70 180
+#moves the players to their spawnpoint and set it
+tp @a[team=blue] @e[tag=blue_spawnpoint,limit=1]
+execute as @a[team=blue] at @s run tp @s ~ ~ ~ 180 ~
+execute at @e[tag=blue_spawnpoint,limit=1] run spawnpoint @a[team=blue] ~ ~ ~ 180
 
-tp @a[team=red] 5000 1 -70 0 ~
-spawnpoint @a[team=red] 5000 1 -70 0
+tp @a[team=red] @e[tag=red_spawnpoint,limit=1]
+execute as @a[team=red] at @s run tp @s ~ ~ ~ 0 ~
+execute at @e[tag=red_spawnpoint,limit=1] run spawnpoint @a[team=red] ~ ~ ~ 0
 
 #put all players with a team in survival mode
 gamemode survival @a[team=!]
