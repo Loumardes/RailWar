@@ -20,11 +20,16 @@ execute if score @s MotionZ matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity
 #decrement tnt cart fuse
 execute as @e[type=command_block_minecart, tag=TNTcart] if score @s TNTFuse matches -2147483648..2147483647 run scoreboard players remove @s TNTFuse 1
 
-#set off the tnt cart if it's fuse ran out or if it contacts fire
+#set off the tnt cart if it's fuse ran out
 execute as @e[type=command_block_minecart, tag=TNTcart] if score @s TNTFuse matches 0 at @s run tag @s add setoff
+scoreboard players reset @s[tag=setoff] TNTFuse
+
+#set off the tnt cart if it contacts fire
 execute as @e[type=command_block_minecart, tag=TNTcart] at @s if block ~ ~ ~ fire run tag @s add setoff
 
-execute if entity @s[tag=setoff] run function loumardes:railrush/detonate_tntcart
+#run the setoff function if the cart is not too close from it's crystal
+execute if entity @s[tag=setoff,tag=blue] unless entity @e[type=marker,tag=blue_crystal,distance=..12,limit=1] run function loumardes:railrush/detonate_tntcart
+execute if entity @s[tag=setoff,tag=red] unless entity @e[type=marker,tag=red_crystal,distance=..12,limit=1] run function loumardes:railrush/detonate_tntcart
 
 #get the movement caracteristics for the next tic
 execute store result score @s FallDistance run data get entity @s FallDistance 1000
