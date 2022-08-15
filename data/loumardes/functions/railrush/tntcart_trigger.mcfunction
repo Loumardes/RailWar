@@ -4,8 +4,8 @@ tag @s add processingTrigers
 execute if score @s FallDistance matches 3000.. if entity @s[nbt={OnGround:1b}] unless block ~ ~ ~ #rails run tag @s add setoff
 
 #explode if it collides with something at sufficient speed
-execute if score @s MotionX matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=command_block_minecart,dx=0,dy=0,dz=0,tag=!processingTrigers] run tag @s add setoff
-execute if score @s MotionZ matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=command_block_minecart,dx=0,dy=0,dz=0,tag=!processingTrigers] run tag @s add setoff
+execute if score @s MotionX matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=command_block_minecart,dx=0,dy=0,dz=0,tag=!processingTrigers] run tag @e[type=command_block_minecart,dx=0,dy=0,dz=0,tag=!processingTrigers] add setoff
+execute if score @s MotionZ matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=command_block_minecart,dx=0,dy=0,dz=0,tag=!processingTrigers] run tag @e[type=command_block_minecart,dx=0,dy=0,dz=0,tag=!processingTrigers] add setoff
 
 execute if score @s MotionX matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=chest_minecart,dx=0,dy=0,dz=0,tag=!processingTrigers] run tag @s add setoff
 execute if score @s MotionZ matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=chest_minecart,dx=0,dy=0,dz=0,tag=!processingTrigers] run tag @s add setoff
