@@ -18,6 +18,11 @@ scoreboard players reset @a Click
 scoreboard players add @e[type=marker,tag=PrimedCartParticles] Process 1
 execute as @e[type=marker,tag=PrimedCartParticles] if score @s Process matches 5.. at @s run function loumardes:railrush/particles/primedcart
 execute as @e[type=command_block_minecart, tag=TNTcart] if score @s TNTFuse matches -2147483648..2147483647 at @s run summon marker ~ ~ ~ {Tags:["PrimedCartParticles"]}
+
+#lift the minecarts on ladders
+execute as @e[type=command_block_minecart] at @s run function loumardes:railrush/item/cart_lift
+
+
 #starts the game if someone runs the command
 execute if entity @a[scores={startGame=1..2147483647}] run function loumardes:railrush/startgame
 scoreboard players reset @a startGame

@@ -18,7 +18,11 @@ scoreboard objectives add RW_spawner_id dummy
 scoreboard objectives add startGame trigger
 
 
+scoreboard players set 0 Constant 0
 scoreboard players set -1 Constant -1
+scoreboard players set LiftStrenght Constant 250
+
+gamerule randomTickSpeed 0
 
 team add red
 team add blue
