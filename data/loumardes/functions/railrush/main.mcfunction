@@ -19,9 +19,13 @@ scoreboard players add @e[type=marker,tag=PrimedCartParticles] Process 1
 execute as @e[type=marker,tag=PrimedCartParticles] if score @s Process matches 5.. at @s run function loumardes:railrush/particles/primedcart
 execute as @e[type=command_block_minecart, tag=TNTcart] if score @s TNTFuse matches -2147483648..2147483647 at @s run summon marker ~ ~ ~ {Tags:["PrimedCartParticles"]}
 
-#lift the minecarts on ladders
+#lift the minecarts on vines
 execute as @e[type=command_block_minecart] at @s run function loumardes:railrush/item/cart_lift
 
+#jump pad : launch carts and grant jump boost
+execute as @e[type=command_block_minecart,tag=JumpPadForward] at @s run function loumardes:railrush/item/jump_pad_forward
+execute as @e[type=command_block_minecart] at @s if block ~ ~-1 ~ emerald_block run function loumardes:railrush/item/jump_pad
+execute as @a at @s if block ~ ~-1 ~ emerald_block run effect give @s minecraft:jump_boost 1 8
 
 #starts the game if someone runs the command
 execute if entity @a[scores={startGame=1..2147483647}] run function loumardes:railrush/startgame

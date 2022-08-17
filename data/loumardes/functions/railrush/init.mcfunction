@@ -21,6 +21,7 @@ scoreboard objectives add startGame trigger
 scoreboard players set 0 Constant 0
 scoreboard players set -1 Constant -1
 scoreboard players set LiftStrenght Constant 250
+scoreboard players set JumpPadStrenght Constant 2000
 
 gamerule randomTickSpeed 0
 
