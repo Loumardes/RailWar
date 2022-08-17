@@ -6,11 +6,11 @@ execute unless entity @e[type=command_block_minecart,tag=red,limit=1] as @e[type
 
 
 #destroy gold carts stepping on powered activator rails
-execute as @e[type=command_block_minecart,tag=GoldCart] at @s if block ~ ~ ~ activator_rail[powered=true] run function loumardes:railrush/destroy_goldcart
+execute as @e[type=command_block_minecart,tag=RessourceCart] at @s if block ~ ~ ~ activator_rail[powered=true] run function loumardes:railrush/destroy_goldcart
 
 #replace destroyed gold minecarts
 tag @e[type=marker,tag=RW_gold_spawner] add RW_Check_Cart
-execute as @e[type=command_block_minecart,tag=GoldCart] run function loumardes:railrush/ressources/check_cart
+execute as @e[type=command_block_minecart,tag=RessourceCart] run function loumardes:railrush/ressources/check_cart
 execute as @e[type=marker,tag=RW_Check_Cart] at @s run function loumardes:railrush/ressources/spawn_cart
 
 #adds collected carts to score
