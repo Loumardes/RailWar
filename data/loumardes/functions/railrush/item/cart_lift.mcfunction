@@ -8,4 +8,4 @@ execute if block ~ ~ ~ vine[east=true] store result entity @s Motion[0] double 0
 execute if block ~ ~ ~ vine[west=true] store result entity @s Motion[0] double -0.001 run scoreboard players get LiftStrenght Constant
 execute if block ~ ~ ~ vine[east=true,west=true] store result entity @s Motion[0] double 1 run scoreboard players get 0 Constant
 
-data merge entity @s {FallDistance:0f}
+execute if block ~ ~ ~ vine run data merge entity @s {FallDistance:0f}
