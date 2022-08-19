@@ -14,7 +14,6 @@ l'armure du kit est du bon tier
 
 SECONDAIRE :
 unlimited lever activation tool
-redstone blocs à l'achat ?
 
 COLLABORATIONS : 
 Soundtrack
@@ -22,3 +21,21 @@ Aeris one s'en occupe
 
 build mine warrio
 baronduscotch fais le build
+
+RESULTAT TEST:
+reduire vitesse upgrade stuff (tiers d'enchant)
+nerf nombre grenade
+fix catapulte (gunivers lib)
+commandblocks buggés
+
+grenade activant le tnt cart ?
+upgrade bow
+seule une équipe pouvant allumer le wagonnet
+temps de respawn croissant
+bloquer l'accès au shop à l'équipe enemie
+
+start heal
+fonction join, restart
+
+fix tnt trigger
+fix shop commandblocks
