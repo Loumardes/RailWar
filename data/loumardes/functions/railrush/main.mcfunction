@@ -15,9 +15,9 @@ execute as @a[scores={Click=1..}] at @s anchored eyes run function loumardes:rai
 scoreboard players reset @a Click
 
 #display particles on primed minecart (minecarts are affiched one tick behind their actual location)
-scoreboard players add @e[type=marker,tag=PrimedCartParticles] Process 1
-execute as @e[type=marker,tag=PrimedCartParticles] if score @s Process matches 5.. at @s run function loumardes:railrush/particles/primedcart
-execute as @e[type=command_block_minecart, tag=TNTcart] if score @s TNTFuse matches -2147483648..2147483647 at @s run summon marker ~ ~ ~ {Tags:["PrimedCartParticles"]}
+scoreboard players add @e[type=marker,tag=CartParticles] Process 1
+execute as @e[type=marker,tag=CartParticles] if score @s Process matches 4.. at @s run function loumardes:railrush/particles/cart_particles
+execute as @e[type=command_block_minecart, tag=TNTcart] at @s run function loumardes:railrush/particles/cart_marker
 
 #lift the minecarts on vines
 execute as @e[type=command_block_minecart] at @s run function loumardes:railrush/item/cart_lift
