@@ -3,7 +3,8 @@
 #command to start the recursivity :
 #execute as @s at @s anchored eyes run function loumardes:railrush/item/cart_primer/prime_cart
 
-execute as @e[type=command_block_minecart, tag=TNTcart,dx=0,dy=-0.5,dz=0,limit=1] unless score @s TNTFuse matches 0..2147483647 run scoreboard players set @s TNTFuse 80
+execute if entity @s[team=blue] as @e[type=command_block_minecart,tag=blue, tag=TNTcart,dx=0,dy=-0.5,dz=0,limit=1] unless score @s TNTFuse matches 0..2147483647 run scoreboard players set @s TNTFuse 80
+execute if entity @s[team=red] as @e[type=command_block_minecart, tag=red, tag=TNTcart,dx=0,dy=-0.5,dz=0,limit=1] unless score @s TNTFuse matches 0..2147483647 run scoreboard players set @s TNTFuse 80
 
 
 scoreboard players add @s Process 1
