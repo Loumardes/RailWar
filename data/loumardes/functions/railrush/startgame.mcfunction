@@ -21,8 +21,9 @@ tp @a[team=red] @e[tag=red_spawnpoint,limit=1]
 execute as @a[team=red] at @s run tp @s ~ ~ ~ 0 ~
 execute at @e[tag=red_spawnpoint,limit=1] run spawnpoint @a[team=red] ~ ~ ~ 0
 
-#put all players with a team in survival mode
+#put all players with a team in survival modeand heal them
 gamemode survival @a[team=!]
+effect give @a instant_health 1 10 false
 #set all players without a team spectator
 gamemode spectator @a[team=]
 #and put all spectators in the middle
