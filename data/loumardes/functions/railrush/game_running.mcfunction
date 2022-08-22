@@ -28,6 +28,9 @@ execute as @e[type=marker,tag=ressource_collector] at @s run kill @e[type=comman
 execute if score Blue iron = Blue tech run function loumardes:railrush/item/gear/upgrade_blue
 execute if score Red iron = Red tech run function loumardes:railrush/item/gear/upgrade_red
 
+#grants reward if someone was killed by tnt cart
+execute if entity @a[tag=killed_by_tnt_cart,limit=1] run function loumardes:railrush/kill/explosion_reward
+
 #checks nexus integrity
 execute as @e[type=marker,tag=crystal] at @s unless predicate loumardes:intact_nexus run tag @s add destroyed
 execute unless entity @e[type=marker,tag=blue_crystal,tag=!destroyed] run function loumardes:railrush/blue_team_eliminated
