@@ -5,6 +5,9 @@ execute if block ~ ~ ~ activator_rail[powered=true] unless score @s TNTFuse matc
 
 #explode if fall from too high
 execute if score @s FallDistance matches 3000.. if entity @s[nbt={OnGround:1b}] unless block ~ ~ ~ #rails run tag @s add setoff
+#explode if fall from too high in vector mode
+execute if entity @s[tag=launchpad_fall,nbt={OnGround:1b}] unless block ~ ~ ~ #rails run tag @s add setoff
+execute if entity @s[tag=launchpad_fall,nbt={OnGround:1b}] if block ~ ~ ~ #rails run tag @s remove launchpad_fall
 
 #explode if it collides with something at sufficient speed
 execute if score @s MotionX matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=command_block_minecart,dx=0,dy=0,dz=0,tag=!processingTrigers] run tag @e[type=command_block_minecart,dx=0,dy=0,dz=0,tag=TNTcart] add setoff

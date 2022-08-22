@@ -1,19 +1,22 @@
 
-
-
-
-PRIORITE :
+DONE :
 minecart sans friendly fire (cristal)
 allumage seulement du wagonnet de son équipe
+transforrmer l'or n'en fais pas respawner
+catapulte slime
+seule une équipe pouvant allumer le wagonnet
+
+PRIORITE :
+reduire vitesse upgrade stuff (tiers d'enchant)
+nerf nombre grenade
 
 IMPORTANT :
 kill par explosion rapporte de l'or
-transforrmer l'or n'en fais pas respawner
-catapulte slime
 l'armure du kit est du bon tier
+commandblocks buggés (remplacer par fonctions)
 
 SECONDAIRE :
-unlimited lever activation tool
+unlimited lever activation tool (have particles as preview of affected levers)
 
 COLLABORATIONS : 
 Soundtrack
@@ -23,14 +26,10 @@ build mine warrio
 baronduscotch fais le build
 
 RESULTAT TEST:
-reduire vitesse upgrade stuff (tiers d'enchant)
-nerf nombre grenade
 fix catapulte (gunivers lib)
-commandblocks buggés
 
 grenade activant le tnt cart ?
 upgrade bow
-seule une équipe pouvant allumer le wagonnet
 temps de respawn croissant
 bloquer l'accès au shop à l'équipe enemie
 

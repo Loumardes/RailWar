@@ -4,10 +4,23 @@ scoreboard objectives add Process dummy
 
 scoreboard objectives add TNTFuse dummy
 scoreboard objectives add FallDistance dummy
+
 scoreboard objectives add MotionX dummy
 scoreboard objectives add MotionZ dummy
 
+scoreboard objectives add StoredMotionX dummy
+scoreboard objectives add StoredMotionZ dummy
+
+scoreboard objectives add VectorX dummy
+scoreboard objectives add VectorY dummy
+scoreboard objectives add VectorZ dummy
+
+scoreboard objectives add Var1 dummy
+scoreboard objectives add Var2 dummy
+scoreboard objectives add Var3 dummy
+
 scoreboard objectives add Click used:carrot_on_a_stick
+scoreboard objectives add KilledByTNTCart killed_by:tnt_minecart
 
 scoreboard objectives add gold dummy ["",{"text":"Gold ","color":"gold"}]
 scoreboard objectives add iron dummy
@@ -21,7 +34,8 @@ scoreboard objectives add startGame trigger
 scoreboard players set 0 Constant 0
 scoreboard players set -1 Constant -1
 scoreboard players set LiftStrenght Constant 250
-scoreboard players set JumpPadStrenght Constant 2000
+scoreboard players set VectorGravity Constant 49
+scoreboard players set ExplosionKillReward Constant 5
 
 gamerule randomTickSpeed 0
 

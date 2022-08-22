@@ -23,8 +23,8 @@ execute as @e[type=command_block_minecart, tag=TNTcart] at @s run function louma
 execute as @e[type=command_block_minecart] at @s run function loumardes:railrush/item/cart_lift
 
 #jump pad : launch carts and grant jump boost
-execute as @e[type=command_block_minecart,tag=JumpPadForward] at @s run function loumardes:railrush/item/jump_pad_forward
-execute as @e[type=command_block_minecart] at @s if block ~ ~-1 ~ emerald_block run function loumardes:railrush/item/jump_pad
+execute as @e[type=command_block_minecart] at @s if block ~ ~-1 ~ emerald_block run function loumardes:railrush/item/jump_pad/launch
+execute as @e[tag=vector_motion] at @s run function loumardes:railrush/vector_motion/launched_cart
 execute as @a at @s if block ~ ~-1 ~ emerald_block run effect give @s minecraft:jump_boost 1 8
 
 #starts the game if someone runs the command
