@@ -1,5 +1,8 @@
 tag @s add processingTrigers
 
+#set the fuse of the tnt cart if it stands on a powered activator rail
+execute if block ~ ~ ~ activator_rail[powered=true] unless score @s TNTFuse matches 0..2147483647 run scoreboard players set @s TNTFuse 80
+
 #explode if fall from too high
 execute if score @s FallDistance matches 3000.. if entity @s[nbt={OnGround:1b}] unless block ~ ~ ~ #rails run tag @s add setoff
 
