@@ -5,15 +5,17 @@ allumage seulement du wagonnet de son équipe
 transforrmer l'or n'en fais pas respawner
 catapulte slime
 seule une équipe pouvant allumer le wagonnet
+reduire vitesse upgrade stuff (tiers d'enchant)
+l'armure du kit est du bon tier
+fix catapulte (gunivers lib)
+start heal
 
 PRIORITE :
-reduire vitesse upgrade stuff (tiers d'enchant)
 nerf nombre grenade
 verifier les zones dxyz (bug MC-123441)
 
 IMPORTANT :
 kill par explosion rapporte de l'or
-l'armure du kit est du bon tier
 commandblocks buggés (remplacer par fonctions)
 
 SECONDAIRE :
@@ -29,14 +31,12 @@ build mine warrio
 baronduscotch fais le build
 
 RESULTAT TEST:
-fix catapulte (gunivers lib)
 
 grenade activant le tnt cart ?
 upgrade bow
 temps de respawn croissant
 bloquer l'accès au shop à l'équipe enemie
 
-start heal
 fonction join, restart
 
 fix tnt trigger
