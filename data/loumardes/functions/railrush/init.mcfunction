@@ -20,6 +20,7 @@ scoreboard objectives add Var2 dummy
 scoreboard objectives add Var3 dummy
 
 scoreboard objectives add Click used:carrot_on_a_stick
+scoreboard objectives add Killed deathCount
 scoreboard objectives add KilledByTNTCart killed_by:tnt_minecart
 
 scoreboard objectives add gold dummy ["",{"text":"Gold ","color":"gold"}]

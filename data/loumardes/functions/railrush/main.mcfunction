@@ -31,6 +31,7 @@ execute if entity @a[scores={startGame=1..2147483647}] run function loumardes:ra
 scoreboard players reset @a startGame
 scoreboard players enable @a startGame
 
-
+#grants a new minecart to killed players
+execute as @a[scores={Killed=1..}] run function loumardes:railrush/item/minecart
 
 execute if score GameRunning Constant matches 1 run function loumardes:railrush/game_running
