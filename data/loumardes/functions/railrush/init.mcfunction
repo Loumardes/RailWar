@@ -25,12 +25,14 @@ scoreboard objectives add KilledByTNTCart killed_by:tnt_minecart
 scoreboard objectives add gold dummy ["",{"text":"Gold ","color":"gold"}]
 scoreboard objectives add iron dummy
 scoreboard objectives add tech dummy
+scoreboard objectives add tech_requirement dummy
 
 scoreboard objectives add RW_spawner_id dummy
 
 scoreboard objectives add startGame trigger
 
 
+scoreboard players set 5 Constant 5
 scoreboard players set 0 Constant 0
 scoreboard players set -1 Constant -1
 scoreboard players set LiftStrenght Constant 250

@@ -9,6 +9,7 @@ seule une équipe pouvant allumer le wagonnet
 PRIORITE :
 reduire vitesse upgrade stuff (tiers d'enchant)
 nerf nombre grenade
+verifier les zones dxyz (bug MC-123441)
 
 IMPORTANT :
 kill par explosion rapporte de l'or
@@ -17,6 +18,8 @@ commandblocks buggés (remplacer par fonctions)
 
 SECONDAIRE :
 unlimited lever activation tool (have particles as preview of affected levers)
+gunpowder ressource (increase tnt cart count)
+turntable rail
 
 COLLABORATIONS : 
 Soundtrack

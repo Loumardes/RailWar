@@ -16,10 +16,6 @@ execute as @e[type=marker,tag=RW_Check_Cart] at @s run function loumardes:railru
 #adds collected carts to score
 execute as @e[type=marker,tag=ressource_collector] at @s if entity @e[type=command_block_minecart,tag=RessourceCart,dx=0,dy=0,dz=0,limit=1] run function loumardes:railrush/ressources/collect_cart
 
-#upgrade gear if a team brought enough iron
-execute if score Blue iron = Blue tech run function loumardes:railrush/item/gear/upgrade_blue
-execute if score Red iron = Red tech run function loumardes:railrush/item/gear/upgrade_red
-
 #grants reward if someone was killed by tnt cart
 execute if entity @a[tag=killed_by_tnt_cart,limit=1] run function loumardes:railrush/kill/explosion_reward
 

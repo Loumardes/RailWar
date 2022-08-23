@@ -5,8 +5,10 @@ scoreboard players set Blue gold 0
 scoreboard players set Red gold 0
 scoreboard players set Blue iron 0
 scoreboard players set Red iron 0
-scoreboard players set Blue tech 1
-scoreboard players set Red tech 1
+scoreboard players set Blue tech 0
+scoreboard players set Red tech 0
+scoreboard players set Blue tech_requirement 1
+scoreboard players set Red tech_requirement 1
 team join blue Blue
 team join red Red
 team modify blue color blue
@@ -21,7 +23,7 @@ tp @a[team=red] @e[tag=red_spawnpoint,limit=1]
 execute as @a[team=red] at @s run tp @s ~ ~ ~ 0 ~
 execute at @e[tag=red_spawnpoint,limit=1] run spawnpoint @a[team=red] ~ ~ ~ 0
 
-#put all players with a team in survival modeand heal them
+#put all players with a team in survival mode and heal them
 gamemode survival @a[team=!]
 effect give @a instant_health 1 10 false
 #set all players without a team spectator
