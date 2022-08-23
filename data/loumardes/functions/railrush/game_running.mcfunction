@@ -14,15 +14,7 @@ execute as @e[type=command_block_minecart,tag=RessourceCart] run function loumar
 execute as @e[type=marker,tag=RW_Check_Cart] at @s run function loumardes:railrush/ressources/spawn_cart
 
 #adds collected carts to score
-execute as @e[type=marker,tag=blue_ressource_collector] at @s if entity @e[type=command_block_minecart,tag=GoldCart,dx=0,dy=0,dz=0,limit=1] run scoreboard players add Blue gold 1
-execute as @e[type=marker,tag=red_ressource_collector] at @s if entity @e[type=command_block_minecart,tag=GoldCart,dx=0,dy=0,dz=0,limit=1] run scoreboard players add Red gold 1
-execute as @e[type=marker,tag=ressource_collector] at @s at @e[type=command_block_minecart,tag=GoldCart,dx=0,dy=0,dz=0,limit=1] run particle block gold_block ~ ~ ~ 0.5 0.5 0.5 4 40 normal
-execute as @e[type=marker,tag=ressource_collector] at @s run kill @e[type=command_block_minecart,tag=GoldCart,dx=0,dy=0,dz=0,limit=1]
-
-execute as @e[type=marker,tag=blue_ressource_collector] at @s if entity @e[type=command_block_minecart,tag=IronCart,dx=0,dy=0,dz=0,limit=1] run scoreboard players add Blue iron 1
-execute as @e[type=marker,tag=red_ressource_collector] at @s if entity @e[type=command_block_minecart,tag=IronCart,dx=0,dy=0,dz=0,limit=1] run scoreboard players add Red iron 1
-execute as @e[type=marker,tag=ressource_collector] at @s at @e[type=command_block_minecart,tag=IronCart,dx=0,dy=0,dz=0,limit=1] run particle block iron_bars ~ ~ ~ 0.5 0.5 0.5 4 40 normal
-execute as @e[type=marker,tag=ressource_collector] at @s run kill @e[type=command_block_minecart,tag=IronCart,dx=0,dy=0,dz=0,limit=1]
+execute as @e[type=marker,tag=ressource_collector] at @s if entity @e[type=command_block_minecart,tag=RessourceCart,dx=0,dy=0,dz=0,limit=1] run function loumardes:railrush/ressources/collect_cart
 
 #upgrade gear if a team brought enough iron
 execute if score Blue iron = Blue tech run function loumardes:railrush/item/gear/upgrade_blue
