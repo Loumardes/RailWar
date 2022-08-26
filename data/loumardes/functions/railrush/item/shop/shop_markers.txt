@@ -1,0 +1,6 @@
+/execute align xyz run summon marker ~ ~ ~ {Tags:["shop","bow_shop"]}
+/execute align xyz run summon marker ~ ~ ~ {Tags:["shop","vanishing_bow_shop"]}
+/execute align xyz run summon marker ~ ~ ~ {Tags:["shop","elevator_shop"]}
+/execute align xyz run summon marker ~ ~ ~ {Tags:["shop","grenade_shop"]}
+/execute align xyz run summon marker ~ ~ ~ {Tags:["shop","jump_pad_shop"]}
+/execute align xyz run summon marker ~ ~ ~ {Tags:["shop","scaffolding_shop"]}

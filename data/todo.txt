@@ -17,6 +17,7 @@ verifier les zones dxyz (bug MC-123441)
 IMPORTANT :
 kill par explosion rapporte de l'or
 commandblocks buggés (remplacer par fonctions)
+reset system
 
 SECONDAIRE :
 unlimited lever activation tool (have particles as preview of affected levers)
