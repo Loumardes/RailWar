@@ -9,20 +9,27 @@ reduire vitesse upgrade stuff (tiers d'enchant)
 l'armure du kit est du bon tier
 fix catapulte (gunivers lib)
 start heal
+nerf nombre grenade
+commandblocks buggés (remplacer par fonctions)
+upgrade bow
+verifier les zones dxyz (bug MC-123441)
 
 PRIORITE :
-nerf nombre grenade
-verifier les zones dxyz (bug MC-123441)
 
 IMPORTANT :
 kill par explosion rapporte de l'or
-commandblocks buggés (remplacer par fonctions)
-reset system
+reset system (partie basse de 25x45x45 blocks, partie haute ballon)
+fonction join, restart
+fix tnt trigger (non tnt carts colliding at sufficient speed with tnt carts don't prime them)
+kill spent players minecarts and drop them
 
 SECONDAIRE :
+temps de respawn croissant
+void kill below -65 blocks
 unlimited lever activation tool (have particles as preview of affected levers)
 gunpowder ressource (increase tnt cart count)
 turntable rail
+grenade activant le tnt cart ?
 
 COLLABORATIONS : 
 Soundtrack
@@ -33,12 +40,3 @@ baronduscotch fais le build
 
 RESULTAT TEST:
 
-grenade activant le tnt cart ?
-upgrade bow
-temps de respawn croissant
-bloquer l'accès au shop à l'équipe enemie
-
-fonction join, restart
-
-fix tnt trigger
-fix shop commandblocks

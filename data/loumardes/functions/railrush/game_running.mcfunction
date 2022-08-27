@@ -13,7 +13,7 @@ execute as @e[type=command_block_minecart,tag=RessourceCart] run function loumar
 execute as @e[type=marker,tag=RW_Check_Cart] at @s run function loumardes:railrush/ressources/spawn_cart
 
 #adds collected carts to score
-execute as @e[type=marker,tag=ressource_collector] at @s if entity @e[type=command_block_minecart,tag=RessourceCart,dx=0,dy=0,dz=0,limit=1] run function loumardes:railrush/ressources/collect_cart
+execute as @e[type=marker,tag=ressource_collector] at @s positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=command_block_minecart,tag=RessourceCart,dx=0,dy=0,dz=0,limit=1] run function loumardes:railrush/ressources/collect_cart
 
 #grants reward if someone was killed by tnt cart
 execute if entity @a[tag=killed_by_tnt_cart,limit=1] run function loumardes:railrush/kill/explosion_reward
