@@ -1,6 +1,15 @@
-/execute align xyz run summon marker ~ ~ ~ {Tags:["shop","bow_shop"]}
-/execute align xyz run summon marker ~ ~ ~ {Tags:["shop","vanishing_bow_shop"]}
-/execute align xyz run summon marker ~ ~ ~ {Tags:["shop","elevator_shop"]}
-/execute align xyz run summon marker ~ ~ ~ {Tags:["shop","grenade_shop"]}
-/execute align xyz run summon marker ~ ~ ~ {Tags:["shop","jump_pad_shop"]}
-/execute align xyz run summon marker ~ ~ ~ {Tags:["shop","scaffolding_shop"]}
+/execute align xyz run summon marker ~ ~-1 ~ {Tags:["shop","bow_shop"]}
+/execute align xyz run summon marker ~ ~-1 ~ {Tags:["shop","vanishing_bow_shop"]}
+/execute align xyz run summon marker ~ ~-1 ~ {Tags:["shop","elevator_shop"]}
+/execute align xyz run summon marker ~ ~-1 ~ {Tags:["shop","grenade_shop"]}
+/execute align xyz run summon marker ~ ~-1 ~ {Tags:["shop","jump_pad_shop"]}
+/execute align xyz run summon marker ~ ~-1 ~ {Tags:["shop","scaffolding_shop"]}
+
+
+/setblock 5002 -4 -69 minecraft:barrel[facing=up,open=false]{Items:[{Count:1b,Slot:0b,id:"minecraft:bow",tag:{Damage:381,display:{Name:'{"text":"5 Gold : Bow 20 uses","color":"gold"}'}}}]}
+/give @s bow{display:{Name:'{"text":"5 Gold : Power I Punch II Bow, 20 uses","color":"gold"}'},Damage:364,Enchantments:[{id:power,lvl:1},{id:punch,lvl:2}]} 1
+/give @s bow{display:{Name:'{"text":"10 Gold : Unbreakable Vanishing Bow","color":"gold"}'},Unbreakable:1,Enchantments:[{id:vanishing_curse,lvl:1},{id:infinity,lvl:1}]} 1
+/give @s minecraft:splash_potion{display:{Name:'{"text":"5 Gold : 1 Grenade","color":"gold"}',Lore:['[{"text":"Can one shot Players","italic":true}]']},Potion:"minecraft:water",CustomPotionEffects:[{Id:7,Amplifier:2}]} 1
+/give @s vine{display:{Name:'{"text":"1 Gold : 16 elevators","color":"gold"}',Lore:['[{"text":"Works on Minecarts and players alike","italic":false}]']}}
+/give @s emerald_block{display:{Name:'{"text":"5 Gold : Jump Pad","color":"gold"}',Lore:['[{"text":"Works on Minecarts and players alike","italic":false}]']}}
+/give @s scaffolding{display:{Name:'{"text":"3 Gold : 32 scaffoldings","color":"gold"}',Lore:['[{"text":"Swiftly placed and broken"}]','[{"text":"Can this be used to rush ?","italic":true}]']}}
