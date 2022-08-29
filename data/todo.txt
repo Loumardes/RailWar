@@ -18,12 +18,14 @@ PRIORITE :
 
 IMPORTANT :
 kill par explosion rapporte de l'or
+prevent players from breaking the crystal by hand
 reset system (partie basse de 25x45x45 blocks, partie haute ballon)
 fonction join, restart
 fix tnt trigger (non tnt carts colliding at sufficient speed with tnt carts don't prime them)
 kill spent players minecarts and drop them
 
 SECONDAIRE :
+add forge (and gunpowder) to layouts
 temps de respawn croissant
 void kill below -65 blocks
 unlimited lever activation tool (have particles as preview of affected levers)
@@ -39,4 +41,15 @@ build mine warrio
 baronduscotch fais le build
 
 RESULTAT TEST:
+
+fuse seems still active within protection range
+
+igniter anchored eyes
+
+shears limited durability
+rajouter vagon clasique à l'élévateur
+
+launcher ne marche pas à coup sur
+
+redstone blocks à l'achat
 

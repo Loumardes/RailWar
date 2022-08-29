@@ -1,5 +1,7 @@
 
 #handles all detonation cases of the tnt cart
+execute as @e[type=command_block_minecart, tag=!TNTcart] at @s run function loumardes:railrush/tntcart_collided
+execute as @e[type=minecart, tag=!TNTcart] at @s run function loumardes:railrush/tntcart_collided
 execute as @e[type=command_block_minecart, tag=TNTcart] at @s run function loumardes:railrush/tntcart_trigger
 
 #moves players from worldspawn to lobby

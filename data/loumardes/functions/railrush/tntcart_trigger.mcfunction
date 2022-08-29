@@ -17,8 +17,11 @@ tag @s[tag=is_side_collision] add setoff
 execute if score @s MotionX matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=command_block_minecart,dx=0,dy=0,dz=0,tag=!processingTrigers] run tag @e[type=command_block_minecart,dx=0,dy=0,dz=0,tag=TNTcart] add setoff
 execute if score @s MotionZ matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=command_block_minecart,dx=0,dy=0,dz=0,tag=!processingTrigers] run tag @e[type=command_block_minecart,dx=0,dy=0,dz=0,tag=TNTcart] add setoff
 
-execute if score @s MotionX matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=chest_minecart,dx=0,dy=0,dz=0,tag=!processingTrigers] run tag @s add setoff
-execute if score @s MotionZ matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=chest_minecart,dx=0,dy=0,dz=0,tag=!processingTrigers] run tag @s add setoff
+execute if score @s MotionX matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=chest_minecart,dx=0,dy=0,dz=0] run tag @s add setoff
+execute if score @s MotionZ matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=chest_minecart,dx=0,dy=0,dz=0] run tag @s add setoff
+
+execute if score @s MotionX matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=minecart,dx=0,dy=0,dz=0] run tag @s add setoff
+execute if score @s MotionZ matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=minecart,dx=0,dy=0,dz=0] run tag @s add setoff
 
 execute if score @s MotionX matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @p[dx=0,dy=0,dz=0] run tag @s add setoff
 execute if score @s MotionZ matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @p[dx=0,dy=0,dz=0] run tag @s add setoff
