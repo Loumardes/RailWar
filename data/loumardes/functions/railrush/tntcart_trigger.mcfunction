@@ -8,7 +8,7 @@ execute if score @s FallDistance matches 3000.. if entity @s[nbt={OnGround:1b}] 
 
 #explode if fall from too high in vector mode
 execute if entity @s[tag=launchpad_fall,nbt={OnGround:1b}] unless block ~ ~ ~ #rails run tag @s add setoff
-execute if entity @s[tag=launchpad_fall,nbt={OnGround:1b}] if block ~ ~ ~ #rails run tag @s remove launchpad_fall
+execute if entity @s[tag=launchpad_fall] if block ~ ~ ~ #rails run tag @s remove launchpad_fall
 
 #explode if colliding into a wall in vector mode
 tag @s[tag=is_side_collision] add setoff
@@ -42,7 +42,9 @@ execute as @e[type=command_block_minecart, tag=TNTcart] at @s if block ~ ~ ~ fir
 
 #run the setoff function if the cart is not too close from it's crystal
 execute if entity @s[tag=setoff,tag=blue] unless entity @e[type=marker,tag=blue_crystal,distance=..12,limit=1] run function loumardes:railrush/detonate_tntcart
+execute if entity @s[tag=setoff,tag=blue] if entity @e[type=marker,tag=blue_crystal,distance=..12,limit=1] run tag @s remove setoff
 execute if entity @s[tag=setoff,tag=red] unless entity @e[type=marker,tag=red_crystal,distance=..12,limit=1] run function loumardes:railrush/detonate_tntcart
+execute if entity @s[tag=setoff,tag=red] if entity @e[type=marker,tag=red_crystal,distance=..12,limit=1] run tag @s remove setoff
 
 #get the movement caracteristics for the next tic
 execute store result score @s FallDistance run data get entity @s FallDistance 1000
