@@ -1,8 +1,18 @@
 
 #handles all detonation cases of the tnt cart
-execute as @e[type=command_block_minecart, tag=!TNTcart] at @s run function loumardes:railrush/tntcart_collided
-execute as @e[type=minecart, tag=!TNTcart] at @s run function loumardes:railrush/tntcart_collided
-execute as @e[type=command_block_minecart, tag=TNTcart] at @s run function loumardes:railrush/tntcart_trigger
+execute as @e[type=command_block_minecart] at @s run function loumardes:railrush/tntcart_collided
+execute as @e[type=minecart] at @s run function loumardes:railrush/tntcart_collided
+
+#get the motion of the carts (after collision detection)
+execute as @e[type=command_block_minecart] store result score @s MotionX run data get entity @s Motion[0] 1000
+execute as @e[type=command_block_minecart] store result score @s MotionZ run data get entity @s Motion[2] 1000
+
+execute as @e[type=minecart] store result score @s MotionX run data get entity @s Motion[0] 1000
+execute as @e[type=minecart] store result score @s MotionZ run data get entity @s Motion[2] 1000
+
+#propels minecarts on rails
+execute as @e[type=command_block_minecart] at @s run function loumardes:railrush/autopropulsion
+execute as @e[type=minecart] at @s run function loumardes:railrush/autopropulsion
 
 #moves players from worldspawn to lobby
 execute positioned 0 0 0 run tp @a[distance=..5] -5000 1 0
