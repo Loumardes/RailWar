@@ -1,10 +1,20 @@
 {
   "criteria": {
-    "scaffolding placed": {
+    "_": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "player": {},
-        "block": "minecraft:activator_rail"
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:activator_rail"
+                ]
+              }
+            }
+          }
+        ]
       }
     }
   },
