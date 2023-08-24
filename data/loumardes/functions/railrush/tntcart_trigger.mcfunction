@@ -13,22 +13,9 @@ execute if entity @s[tag=launchpad_fall] if block ~ ~ ~ #rails run tag @s remove
 #explode if colliding into a wall in vector mode
 tag @s[tag=is_side_collision] add setoff
 
-#explode if it collides with something at sufficient speed
-execute if score @s MotionX matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=command_block_minecart,dx=0,dy=0,dz=0,tag=!processingTrigers] run tag @e[type=command_block_minecart,dx=0,dy=0,dz=0,tag=TNTcart] add setoff
-execute if score @s MotionZ matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=command_block_minecart,dx=0,dy=0,dz=0,tag=!processingTrigers] run tag @e[type=command_block_minecart,dx=0,dy=0,dz=0,tag=TNTcart] add setoff
-
-execute if score @s MotionX matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=chest_minecart,dx=0,dy=0,dz=0] run tag @s add setoff
-execute if score @s MotionZ matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=chest_minecart,dx=0,dy=0,dz=0] run tag @s add setoff
-
-execute if score @s MotionX matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=minecart,dx=0,dy=0,dz=0] run tag @s add setoff
-execute if score @s MotionZ matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=minecart,dx=0,dy=0,dz=0] run tag @s add setoff
-
-execute if score @s MotionX matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @p[dx=0,dy=0,dz=0] run tag @s add setoff
-execute if score @s MotionZ matches 700.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @p[dx=0,dy=0,dz=0] run tag @s add setoff
-
-#explode if decelerated too quickly (THIS HAS BEEN DISABLED BECAUSE IT ALSO DETONATE AT THE END OF A DOWNWARD SLOPE)
-#execute if entity @s[nbt={Motion:[0.0,0.0,0.0]}] if score @s MotionX matches 700.. run tag @s add setoff
-#execute if entity @s[nbt={Motion:[0.0,0.0,0.0]}] if score @s MotionZ matches 700.. run tag @s add setoff
+# handle collisions
+execute if entity @s[tag=blue] run function loumardes:railrush/blue_tntcart_collided
+execute if entity @s[tag=red] run function loumardes:railrush/red_tntcart_collided
 
 #decrement tnt cart fuse
 execute as @e[type=command_block_minecart, tag=TNTcart] if score @s TNTFuse matches -2147483648..2147483647 run scoreboard players remove @s TNTFuse 1
@@ -39,12 +26,6 @@ scoreboard players reset @s[tag=setoff] TNTFuse
 
 #set off the tnt cart if it contacts fire
 execute as @e[type=command_block_minecart, tag=TNTcart] at @s if block ~ ~ ~ fire run tag @s add setoff
-
-#run the setoff function if the cart is not too close from it's crystal
-execute if entity @s[tag=setoff,tag=blue] unless entity @e[type=marker,tag=blue_crystal,distance=..12,limit=1] run function loumardes:railrush/detonate_tntcart
-execute if entity @s[tag=setoff,tag=blue] if entity @e[type=marker,tag=blue_crystal,distance=..12,limit=1] run tag @s remove setoff
-execute if entity @s[tag=setoff,tag=red] unless entity @e[type=marker,tag=red_crystal,distance=..12,limit=1] run function loumardes:railrush/detonate_tntcart
-execute if entity @s[tag=setoff,tag=red] if entity @e[type=marker,tag=red_crystal,distance=..12,limit=1] run tag @s remove setoff
 
 #get the movement caracteristics for the next tic
 execute store result score @s FallDistance run data get entity @s FallDistance 1000

@@ -1,11 +1,9 @@
 
-#handles all detonation cases of the tnt cart
-execute as @e[type=command_block_minecart] at @s run function loumardes:railrush/tntcart_collided
-execute as @e[type=minecart] at @s run function loumardes:railrush/tntcart_collided
 
-#get the motion of the carts (after collision detection)
+#get the motion of the carts
 execute as @e[type=command_block_minecart] store result score @s MotionX run data get entity @s Motion[0] 1000
 execute as @e[type=command_block_minecart] store result score @s MotionZ run data get entity @s Motion[2] 1000
+execute as @e[type=command_block_minecart] store result score @s FallDistance run data get entity @s FallDistance 1000
 
 execute as @e[type=minecart] store result score @s MotionX run data get entity @s Motion[0] 1000
 execute as @e[type=minecart] store result score @s MotionZ run data get entity @s Motion[2] 1000
@@ -21,7 +19,7 @@ execute positioned 0 0 0 run tp @a[distance=..5] -5000 1 0
 execute as @e[type=marker,tag=RW_forge] at @s positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=command_block_minecart,tag=GoldCart,dx=0,dy=0,dz=0,limit=1] run function loumardes:railrush/ressources/forge_convert
 
 #Prime TNT carts when players use the tool for it
-execute as @a[scores={Click=1..}] at @s anchored eyes run function loumardes:railrush/item/cart_primer/prime_cart
+execute as @a[scores={Click=1..}] at @s positioned ~ ~1.5 ~ run function loumardes:railrush/item/remote_activator/activate
 scoreboard players reset @a Click
 
 #display particles on primed minecart (minecarts are affiched one tick behind their actual location)
