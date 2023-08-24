@@ -1,6 +1,6 @@
 
-scoreboard players operation @s MotionX *= 101 Constant
-scoreboard players operation @s MotionZ *= 101 Constant
+scoreboard players operation @s MotionX *= 120 Constant
+scoreboard players operation @s MotionZ *= 120 Constant
 
 scoreboard players operation @s MotionX /= 100 Constant
 scoreboard players operation @s MotionZ /= 100 Constant

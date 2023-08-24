@@ -33,7 +33,7 @@ scoreboard objectives add RW_spawner_id dummy
 
 scoreboard objectives add startGame trigger
 
-scoreboard players set 101 Constant 110
+scoreboard players set 120 Constant 120
 scoreboard players set 100 Constant 100
 scoreboard players set 5 Constant 5
 scoreboard players set 0 Constant 0
