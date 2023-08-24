@@ -18,6 +18,9 @@ execute positioned 0 0 0 run tp @a[distance=..5] -5000 1 0
 #Converts gold carts into iron carts
 execute as @e[type=marker,tag=RW_forge] at @s positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=command_block_minecart,tag=GoldCart,dx=0,dy=0,dz=0,limit=1] run function loumardes:railrush/ressources/forge_convert
 
+#Converts tnt carts into coal carts
+execute unless entity @e[type=command_block_minecart,tag=CoalCart,limit=1] as @e[type=marker,tag=RW_coal_mine] at @s positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=command_block_minecart,tag=TNTcart,dx=0,dy=0,dz=0,limit=1] run function loumardes:railrush/ressources/coal_convert
+
 #Prime TNT carts when players use the tool for it
 execute as @a[scores={Click=1..}] at @s positioned ~ ~1.5 ~ run function loumardes:railrush/item/remote_activator/activate
 scoreboard players reset @a Click
