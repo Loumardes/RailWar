@@ -14,8 +14,8 @@ execute if entity @s[tag=launchpad_fall] if block ~ ~ ~ #rails run tag @s remove
 tag @s[tag=is_side_collision] add setoff
 
 # handle collisions
-execute if entity @s[tag=blue] run function loumardes:railrush/blue_tntcart_collided
-execute if entity @s[tag=red] run function loumardes:railrush/red_tntcart_collided
+execute if entity @s[tag=blue] run function loumardes:railrush/tnt_cart/blue_collided
+execute if entity @s[tag=red] run function loumardes:railrush/tnt_cart/red_collided
 
 #decrement tnt cart fuse
 execute as @e[type=command_block_minecart, tag=TNTcart] if score @s TNTFuse matches -2147483648..2147483647 run scoreboard players remove @s TNTFuse 1
