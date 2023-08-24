@@ -1,7 +1,7 @@
 #Handle all game logic while it is running
 
 #handles all detonation cases of the tnt cart
-execute as @e[type=command_block_minecart,tag=TNTcart] at @s run function loumardes:railrush/tntcart_trigger
+execute as @e[type=command_block_minecart,tag=TNTcart] at @s run function loumardes:railrush/tnt_cart/trigger
 
 #run the tntcart setoff function if the cart is not too close from it's crystal
 execute as @e[type=command_block_minecart,tag=setoff,tag=blue] at @s unless entity @e[type=marker,tag=blue_crystal,distance=..20,limit=1] run function loumardes:railrush/detonate_tntcart
@@ -10,8 +10,8 @@ execute as @e[type=command_block_minecart,tag=setoff,tag=red] at @s unless entit
 execute as @e[type=command_block_minecart,tag=setoff,tag=red] at @s if entity @e[type=marker,tag=red_crystal,distance=..20,limit=1] run tag @s remove setoff
 
 #replace destroyed tnt minecarts
-execute unless entity @e[type=command_block_minecart,tag=blue,limit=1] as @e[type=marker,tag=blue_tnt_spawner] at @s run summon command_block_minecart ~ ~ ~ {Invulnerable:true,Tags:["TNTcart","blue"],CustomDisplayTile:1,DisplayState:{Name:"minecraft:tnt"},DisplayOffset:6,Command: "Yes I am secretly a commandblock minecart ;)"}
-execute unless entity @e[type=command_block_minecart,tag=red,limit=1] as @e[type=marker,tag=red_tnt_spawner] at @s run summon command_block_minecart ~ ~ ~ {Invulnerable:true,Tags:["TNTcart","red"],CustomDisplayTile:1,DisplayState:{Name:"minecraft:tnt"},DisplayOffset:6,Command: "Yes I am secretly a commandblock minecart ;)"}
+function loumardes:railrush/tnt_cart/spawn_blue
+function loumardes:railrush/tnt_cart/spawn_red
 
 #destroy gold carts stepping on powered activator rails
 execute as @e[type=command_block_minecart,tag=RessourceCart] at @s if block ~ ~ ~ activator_rail[powered=true] run function loumardes:railrush/destroy_goldcart

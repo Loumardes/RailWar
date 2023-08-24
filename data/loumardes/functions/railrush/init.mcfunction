@@ -1,5 +1,6 @@
 
 scoreboard objectives add Constant dummy
+scoreboard objectives add Variable dummy
 scoreboard objectives add Process dummy
 
 scoreboard objectives add TNTFuse dummy

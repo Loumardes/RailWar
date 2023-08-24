@@ -13,6 +13,10 @@ nerf nombre grenade
 commandblocks buggés (remplacer par fonctions)
 upgrade bow
 verifier les zones dxyz (bug MC-123441)
+fuse seems still active within protection range
+rajouter vagon clasique à l'élévateur
+fix tnt trigger (non tnt carts colliding at sufficient speed with tnt carts don't prime them)
+unlimited lever activation tool (have particles as preview of affected levers)
 
 PRIORITE :
 
@@ -21,14 +25,12 @@ kill par explosion rapporte de l'or
 prevent players from breaking the crystal by hand
 reset system (partie basse de 25x45x45 blocks, partie haute ballon)
 fonction join, restart
-fix tnt trigger (non tnt carts colliding at sufficient speed with tnt carts don't prime them)
 kill spent players minecarts and drop them
 
 SECONDAIRE :
 add forge (and gunpowder) to layouts
 temps de respawn croissant
 void kill below -65 blocks
-unlimited lever activation tool (have particles as preview of affected levers)
 gunpowder ressource (increase tnt cart count)
 turntable rail
 grenade activant le tnt cart ?
@@ -42,12 +44,10 @@ baronduscotch fais le build
 
 RESULTAT TEST:
 
-fuse seems still active within protection range
 
-igniter anchored eyes
+igniter anchored eyes (Bug MC)
 
 shears limited durability
-rajouter vagon clasique à l'élévateur
 
 launcher ne marche pas à coup sur
 

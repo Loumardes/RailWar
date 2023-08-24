@@ -9,10 +9,17 @@ scoreboard players set Blue tech 0
 scoreboard players set Red tech 0
 scoreboard players set Blue tech_requirement 1
 scoreboard players set Red tech_requirement 1
+scoreboard players set BlueCartCount Variable 1
+scoreboard players set RedCartCount Variable 1
+
 team join blue Blue
 team join red Red
 team modify blue color blue
 team modify red color red
+
+# set the amount of tnt carts
+scoreboard players set BlueCartCount Variable 1
+scoreboard players set RedCartCount Variable 1
 
 #moves the players to their spawnpoint and set it
 tp @a[team=blue] @e[tag=blue_spawnpoint,limit=1]
