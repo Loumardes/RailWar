@@ -1,0 +1,22 @@
+{
+    "criteria": {
+      "_": {
+        "trigger": "minecraft:placed_block",
+        "conditions": {
+          "location": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "block": {
+                  "tag": "loumardes:railrush/players_blocks"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "rewards": {
+      "function": "loumardes:railrush/item/placed_block_marker"
+    }
+  }
