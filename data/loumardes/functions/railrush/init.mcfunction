@@ -20,6 +20,8 @@ scoreboard objectives add Var1 dummy
 scoreboard objectives add Var2 dummy
 scoreboard objectives add Var3 dummy
 
+scoreboard objectives add isCarrying dummy
+
 scoreboard objectives add Click used:carrot_on_a_stick
 scoreboard objectives add Killed deathCount
 scoreboard objectives add KilledByTNTCart killed_by:tnt_minecart

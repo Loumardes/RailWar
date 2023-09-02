@@ -40,6 +40,12 @@ execute as @e[type=minecart] at @s if block ~ ~-1 ~ emerald_block run function l
 execute as @e[tag=vector_motion] at @s run function loumardes:railrush/vector_motion/launched_cart
 execute as @a at @s if block ~ ~-1 ~ emerald_block run effect give @s minecraft:jump_boost 1 8
 
+# delete minecarts which have transported a player
+tag @e[type=minecart] add empty
+execute as @e[type=minecart] on passengers on vehicle run tag @s remove empty
+execute as @e[type=minecart,tag=!wasCarrying] on passengers on vehicle run tag @s add wasCarrying
+kill @e[type=minecart,tag=wasCarrying,tag=empty]
+
 #starts the game if someone runs the command
 execute if entity @a[scores={startGame=1..2147483647}] run function loumardes:railrush/startgame
 scoreboard players reset @a startGame

@@ -17,18 +17,23 @@ fuse seems still active within protection range
 rajouter vagon clasique à l'élévateur
 fix tnt trigger (non tnt carts colliding at sufficient speed with tnt carts don't prime them)
 unlimited lever activation tool (have particles as preview of affected levers)
+add forge (and gunpowder) to layouts
+Fix les spawners de TNTcart
+kill spent players minecarts and drop them
 
 PRIORITE :
 
 IMPORTANT :
+temps de respawn variable des minecarts d'or
+l'or est donné à chaque joueur
 kill par explosion rapporte de l'or
 prevent players from breaking the crystal by hand
 reset system (partie basse de 25x45x45 blocks, partie haute ballon)
 fonction join, restart
-kill spent players minecarts and drop them
+remote activator togles rails directly
 
 SECONDAIRE :
-add forge (and gunpowder) to layouts
+Remplacer les boutons de shop par un villageois
 temps de respawn croissant
 void kill below -65 blocks
 gunpowder ressource (increase tnt cart count)
