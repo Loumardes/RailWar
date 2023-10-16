@@ -36,4 +36,25 @@ execute if block ~ ~ ~ lever[face=floor,facing=south] if score Toggled Constant 
 execute if block ~ ~ ~ lever[face=floor,facing=west] if score Toggled Constant matches 1 run setblock ~ ~ ~ lever[face=floor,facing=west,powered=false]
 
 
+# update the rail
+execute if block ~ ~ ~ lever[face=ceiling] if score Toggled Constant matches 0 run setblock ~ ~1 ~ redstone_block
+
+execute if block ~ ~ ~ lever[face=wall,facing=east] if score Toggled Constant matches 0 run setblock ~-1 ~-1 ~ redstone_torch[lit=true]
+execute if block ~ ~ ~ lever[face=wall,facing=north] if score Toggled Constant matches 0 run setblock ~ ~-1 ~1 redstone_torch[lit=true]
+execute if block ~ ~ ~ lever[face=wall,facing=south] if score Toggled Constant matches 0 run setblock ~ ~-1 ~-1 redstone_torch[lit=true]
+execute if block ~ ~ ~ lever[face=wall,facing=west] if score Toggled Constant matches 0 run setblock ~1 ~-1 ~ redstone_torch[lit=true]
+
+execute if block ~ ~ ~ lever[face=floor] if score Toggled Constant matches 0 run setblock ~ ~-1 ~ redstone_block
+
+#add a redstone lamp
+execute if block ~ ~ ~ lever[face=ceiling] if score Toggled Constant matches 1 run setblock ~ ~1 ~ redstone_lamp
+
+execute if block ~ ~ ~ lever[face=wall,facing=east] if score Toggled Constant matches 1 run setblock ~-1 ~-1 ~ redstone_torch[lit=false]
+execute if block ~ ~ ~ lever[face=wall,facing=north] if score Toggled Constant matches 1 run setblock ~ ~-1 ~1 redstone_torch[lit=false]
+execute if block ~ ~ ~ lever[face=wall,facing=south] if score Toggled Constant matches 1 run setblock ~ ~-1 ~-1 redstone_torch[lit=false]
+execute if block ~ ~ ~ lever[face=wall,facing=west] if score Toggled Constant matches 1 run setblock ~1 ~-1 ~ redstone_torch[lit=false]
+
+execute if block ~ ~ ~ lever[face=floor] if score Toggled Constant matches 1 run setblock ~ ~-1 ~ redstone_lamp
+
+
 particle flame ~ ~ ~ 1 1 1 0.1 20 force

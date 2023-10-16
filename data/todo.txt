@@ -20,24 +20,23 @@ unlimited lever activation tool (have particles as preview of affected levers)
 add forge (and gunpowder) to layouts
 Fix les spawners de TNTcart
 kill spent players minecarts and drop them
+gunpowder ressource (increase tnt cart count)
 
 PRIORITE :
 
 IMPORTANT :
 temps de respawn variable des minecarts d'or
 l'or est donné à chaque joueur
-kill par explosion rapporte de l'or
 prevent players from breaking the crystal by hand
 reset system (partie basse de 25x45x45 blocks, partie haute ballon)
 fonction join, restart
 remote activator togles rails directly
+detonates tnt carts close enough to enemy core
 
 SECONDAIRE :
 Remplacer les boutons de shop par un villageois
 temps de respawn croissant
 void kill below -65 blocks
-gunpowder ressource (increase tnt cart count)
-turntable rail
 grenade activant le tnt cart ?
 
 COLLABORATIONS : 

@@ -16,10 +16,12 @@ tag @s[tag=is_side_collision] add setoff
 # handle collisions
 execute if entity @s[tag=blue] run function loumardes:railrush/tnt_cart/blue_collided
 execute if entity @s[tag=red] run function loumardes:railrush/tnt_cart/red_collided
+execute if entity @s[tag=spectator_team] run function loumardes:railrush/tnt_cart/spectator_team_collided
 
 # detonate if it reaches the enemy crystal
 execute unless entity @s[tag=blue] if entity @e[type=marker,tag=blue_crystal,distance=..5,limit=1] run tag @s add setoff
 execute unless entity @s[tag=red] if entity @e[type=marker,tag=red_crystal,distance=..5,limit=1] run tag @s add setoff
+execute unless entity @s[tag=spectator_team] if entity @e[type=marker,tag=spectator_team_crystal,distance=..5,limit=1] run tag @s add setoff
 
 #decrement tnt cart fuse
 execute as @e[type=command_block_minecart, tag=TNTcart] if score @s TNTFuse matches -2147483648..2147483647 run scoreboard players remove @s TNTFuse 1

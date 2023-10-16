@@ -45,6 +45,28 @@ scoreboard players set VectorGravity Constant 49
 scoreboard players set ExplosionKillReward Constant 5
 
 gamerule randomTickSpeed 0
+gamerule naturalRegeneration false
+
+
+# Teams :
 
 team add red
 team add blue
+team add spectator
+
+team join blue Blue
+team join red Red
+team join spectator Spectators
+
+team modify blue color blue
+team modify red color red
+team modify spectator color white
+
+team modify blue collisionRule always
+team modify red collisionRule always
+team modify spectator collisionRule always
+
+team modify blue friendlyFire false
+team modify red friendlyFire false
+team modify spectator friendlyFire false
+
