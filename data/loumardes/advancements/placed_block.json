@@ -17,6 +17,6 @@
       }
     },
     "rewards": {
-      "function": "loumardes:railrush/item/placed_block_marker"
+      "function": "loumardes:railrush/reset/placed_block_marker"
     }
   }
