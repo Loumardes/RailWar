@@ -9,7 +9,7 @@
             "predicate": {
               "block": {
                 "blocks": [
-                  "minecraft:white_wool"
+                  "minecraft:light_gray_wool"
                 ]
               }
             }
@@ -19,7 +19,7 @@
     }
   },
   "rewards": {
-    "function": "loumardes:railrush/item/replenish/white_wool"
+    "function": "loumardes:railrush/item/replenish/light_gray_wool"
   },
   "parent": "loumardes:replenish"
 }
