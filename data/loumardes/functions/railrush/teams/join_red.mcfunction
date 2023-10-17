@@ -11,3 +11,7 @@ execute if score GameRunning Constant matches 1 run tp @a[team=red] @e[tag=red_s
 execute if score GameRunning Constant matches 1 run execute as @a[team=red] at @s run tp @s ~ ~ ~ 0 ~
 execute if score GameRunning Constant matches 1 run execute at @e[tag=red_spawnpoint,limit=1] run spawnpoint @a[team=red] ~ ~ ~ 0
 
+tellraw @s[] ["",{"text":"[RW] ","color":"gold"},{"text":"You joined team ","color":"gray"},{"text":"Red ","color":"red"}]
+
+advancement revoke @s only loumardes:zone/join_blue
+advancement revoke @s only loumardes:zone/join_spectators

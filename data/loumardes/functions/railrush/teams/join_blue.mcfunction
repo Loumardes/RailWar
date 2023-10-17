@@ -10,3 +10,8 @@ effect give @s saturation infinite 1 true
 execute if score GameRunning Constant matches 1 run tp @a[team=blue] @e[tag=blue_spawnpoint,limit=1]
 execute if score GameRunning Constant matches 1 run execute as @a[team=blue] at @s run tp @s ~ ~ ~ 180 ~
 execute if score GameRunning Constant matches 1 run execute at @e[tag=blue_spawnpoint,limit=1] run spawnpoint @a[team=blue] ~ ~ ~ 180
+
+tellraw @s[] ["",{"text":"[RW] ","color":"gold"},{"text":"You joined team ","color":"gray"},{"text":"Blue ","color":"blue"}]
+
+advancement revoke @s only loumardes:zone/join_red
+advancement revoke @s only loumardes:zone/join_spectators

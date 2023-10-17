@@ -11,8 +11,8 @@ item replace entity @s armor.feet with leather_boots{Unbreakable:1,display:{colo
 
 
 #tier0
-execute if score Red tech matches 0..4 run item replace entity @s armor.chest with leather_chestplate{Unbreakable:1,display:{color:13697026}} 1 
-execute if score Red tech matches 0..4 run item replace entity @s armor.legs with leather_leggings{Unbreakable:1,display:{color:13697026}} 1 
+execute if score Red tech matches 0..4 run item replace entity @s armor.chest with leather_chestplate{Unbreakable:1,display:{color:10263708}} 1 
+execute if score Red tech matches 0..4 run item replace entity @s armor.legs with leather_leggings{Unbreakable:1,display:{color:10263708}} 1 
 execute if score Red tech matches 0..4 run give @s wooden_sword{Unbreakable:1} 1
 
 #tier1

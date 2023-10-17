@@ -21,3 +21,4 @@ execute as @e[type=marker,tag=red_crystal,tag=destroyed] run function loumardes:
 execute as @e[type=marker,tag=spectator_team_crystal,tag=destroyed] run function loumardes:railrush/teams/sandbox_destroyed_spectators
 
 #grants items outside of the wiewing platform and take them away from the players in it
+execute as @a at @s run function loumardes:railrush/lobby/areas
