@@ -27,3 +27,5 @@ execute as @e[type=marker,tag=crystal,tag=!sandbox] at @s unless predicate louma
 execute as @e[type=marker,tag=blue_crystal,tag=destroyed] run function loumardes:railrush/teams/eliminate_blue
 execute as @e[type=marker,tag=red_crystal,tag=destroyed] run function loumardes:railrush/teams/eliminate_red
 
+# disable the start command
+scoreboard players reset @a startGame

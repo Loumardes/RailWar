@@ -54,17 +54,12 @@ execute as @e[type=minecart] on passengers on vehicle run tag @s remove empty
 execute as @e[type=minecart,tag=!wasCarrying] on passengers on vehicle run tag @s add wasCarrying
 kill @e[type=minecart,tag=wasCarrying,tag=empty]
 
-#starts the game if someone runs the command
-execute if entity @a[scores={startGame=1..2147483647}] run function loumardes:railrush/startgame
-scoreboard players reset @a startGame
-scoreboard players enable @a startGame
-
 #apply inventory changes to killed players
 execute as @a[scores={Killed=1..}] run function loumardes:railrush/item/death_changes
 
 #handles players in the worldspawn
 execute positioned -5000 0 0 as @a[distance=..5] run function loumardes:railrush/teams/first_connexion
 
-
-execute if score GameRunning Constant matches 1 run function loumardes:railrush/game_running
+# Mainloop for game and lobby
+execute if score GameRunning Constant matches 1 run function loumardes:railrush/game/main
 execute if score GameRunning Constant matches 0 run function loumardes:railrush/lobby/main

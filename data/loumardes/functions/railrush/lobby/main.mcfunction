@@ -22,3 +22,12 @@ execute as @e[type=marker,tag=spectator_team_crystal,tag=destroyed] run function
 
 #grants items outside of the wiewing platform and take them away from the players in it
 execute as @a at @s run function loumardes:railrush/lobby/areas
+
+#starts the game if the start portal is damaged
+execute store result score PortalAirBlocks Variable run clone -73 8 -1 -69 10 1 -73 8 -1 filtered air force
+execute if score StartCountdown Constant matches 0 unless score PortalAirBlocks Variable matches ..18 run function loumardes:railrush/game/start_preparation
+
+#starts the game if someone runs the command
+execute if entity @a[scores={startGame=1..2147483647}] if score StartCountdown Constant matches 0 run function loumardes:railrush/game/start_preparation
+scoreboard players reset @a startGame
+scoreboard players enable @a startGame

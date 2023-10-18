@@ -1,4 +1,5 @@
 scoreboard players set GameRunning Constant 1
+scoreboard players set StartCountdown Constant 0
 
 scoreboard objectives setdisplay sidebar gold
 scoreboard players set Blue gold 0
@@ -29,8 +30,6 @@ execute as @a[gamemode=!spectator] run function loumardes:railrush/item/starting
 
 #repair bases
 function loumardes:railrush/reset/area
-#execute as @e[type=marker,tag=blue_crystal] at @s run function loumardes:railrush/bases/repair_blue_crystal
-#execute as @e[type=marker,tag=red_crystal] at @s run function loumardes:railrush/bases/repair_red_crystal
 
 #secure item frames
 execute as @e[type=minecraft:item_frame] run data modify entity @s {} merge value {Invulnerable:1,Fixed:1}

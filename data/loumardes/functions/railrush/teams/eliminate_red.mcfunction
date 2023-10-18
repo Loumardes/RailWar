@@ -3,4 +3,4 @@ tellraw @a[] ["",{"text":"[RW] ","color":"gold"},{"text":"☠ Team ","color":"gr
 
 tag @s remove destroyed
 
-function loumardes:railrush/stop_game
+function loumardes:railrush/game/stop
