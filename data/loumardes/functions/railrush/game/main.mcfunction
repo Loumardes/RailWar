@@ -20,7 +20,7 @@ execute as @e[type=marker,tag=ressource_collector,tag=!sandbox] at @s positioned
 execute if entity @a[tag=killed_by_tnt_cart,limit=1] run function loumardes:railrush/kill/explosion_reward
 
 #checks shops orders
-execute as @e[type=marker,tag=shop] at @s if block ~ ~1 ~ #loumardes:railrush/redstone_activator[powered=true] run function loumardes:railrush/item/shop/check_bought
+execute as @e[type=marker,tag=shop,tag=!sandbox] at @s if block ~ ~1 ~ #loumardes:railrush/redstone_activator[powered=true] run function loumardes:railrush/item/shop/check_bought
 
 #checks nexus integrity
 execute as @e[type=marker,tag=crystal,tag=!sandbox] at @s unless predicate loumardes:intact_nexus run tag @s add destroyed

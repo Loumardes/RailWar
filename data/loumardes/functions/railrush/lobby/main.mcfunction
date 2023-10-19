@@ -14,6 +14,9 @@ execute as @e[type=marker,tag=RW_Check_Cart] at @s run function loumardes:railru
 #adds collected carts to score
 execute as @e[type=marker,tag=ressource_collector,tag=sandbox] at @s positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=command_block_minecart,tag=RessourceCart,dx=0,dy=0,dz=0,limit=1] run function loumardes:railrush/ressources/collect_cart
 
+#checks shops orders
+execute as @e[type=marker,tag=shop,tag=sandbox] at @s if block ~ ~1 ~ #loumardes:railrush/redstone_activator[powered=true] run function loumardes:railrush/item/shop/check_bought
+
 #checks sandbox crystals integrity
 execute as @e[type=marker,tag=crystal,tag=sandbox] at @s unless predicate loumardes:intact_nexus run tag @s add destroyed
 execute as @e[type=marker,tag=blue_crystal,tag=destroyed] run function loumardes:railrush/teams/sandbox_destroyed_blue
