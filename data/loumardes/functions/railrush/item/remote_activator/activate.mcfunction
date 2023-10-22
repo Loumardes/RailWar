@@ -7,12 +7,12 @@
 execute if entity @s[team=blue] positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=command_block_minecart,tag=blue, tag=TNTcart,dx=0,dy=-0.5,dz=0,limit=1] run tag @s add setoff
 execute if entity @s[team=red] positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=command_block_minecart, tag=red, tag=TNTcart,dx=0,dy=-0.5,dz=0,limit=1] run tag @s add setoff
 
-#toggle levers
-execute if block ~ ~ ~ lever run function loumardes:railrush/item/remote_activator/toggle_lever
+#rotate switchs
+execute if block ~ ~0.8 ~ rail run function loumardes:railrush/item/remote_activator/rotate_rail/main
 
 scoreboard players add @s Process 1
 execute if score @s Process matches 10.. run particle flame ~ ~ ~ 0 0 0 0.01 1 force
 
-execute unless block ~ ~ ~ lever positioned ~-0.5 ~-0.5 ~-0.5 unless entity @e[type=command_block_minecart, tag=TNTcart,dx=0,dy=-0.5,dz=0,limit=1] positioned ~0.5 ~0.5 ~0.5 unless score @s Process matches 300.. positioned ^ ^ ^0.5 run function loumardes:railrush/item/remote_activator/activate
+execute unless block ~ ~0.8 ~ rail positioned ~-0.5 ~-0.5 ~-0.5 unless entity @e[type=command_block_minecart, tag=TNTcart,dx=0,dy=-0.5,dz=0,limit=1] positioned ~0.5 ~0.5 ~0.5 unless score @s Process matches 300.. positioned ^ ^ ^0.5 run function loumardes:railrush/item/remote_activator/activate
 
 scoreboard players reset @s Process 
