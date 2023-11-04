@@ -16,7 +16,7 @@ execute as @e[type=minecart] at @s run function loumardes:railrush/autopropulsio
 execute as @e[type=command_block_minecart,tag=TNTcart] at @s run function loumardes:railrush/tnt_cart/trigger
 
 #Prime TNT carts when players use the tool for it
-execute as @a[scores={Click=1..}] at @s positioned ~ ~1.5 ~ run function loumardes:railrush/item/remote_activator/activate
+execute as @a[scores={Click=1..}] at @s anchored eyes positioned ^ ^ ^ run function loumardes:railrush/item/remote_activator/activate
 scoreboard players reset @a Click
 
 #run the tntcart setoff function if the cart is not too close from it's crystal
