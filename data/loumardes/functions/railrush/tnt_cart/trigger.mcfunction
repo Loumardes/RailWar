@@ -18,6 +18,11 @@ execute if entity @s[tag=blue] run function loumardes:railrush/tnt_cart/blue_col
 execute if entity @s[tag=red] run function loumardes:railrush/tnt_cart/red_collided
 execute if entity @s[tag=spectator_team] run function loumardes:railrush/tnt_cart/spectator_team_collided
 
+# detonate if it reaches the enemy guardian
+execute if entity @s[tag=blue] if entity @e[type=furnace_minecart,tag=guardian,tag=!blue,distance=..3,limit=1] run tag @s add setoff
+execute if entity @s[tag=red] if entity @e[type=furnace_minecart,tag=guardian,tag=!red,distance=..3,limit=1] run tag @s add setoff
+execute if entity @s[tag=spectator_team] if entity @e[type=furnace_minecart,tag=guardian,tag=!spectator_team_guardian,distance=..3,limit=1] run tag @s add setoff
+
 # detonate if it reaches the enemy crystal
 execute unless entity @s[tag=blue] if entity @e[type=marker,tag=blue_crystal,distance=..5,limit=1] run tag @s add setoff
 execute unless entity @s[tag=red] if entity @e[type=marker,tag=red_crystal,distance=..5,limit=1] run tag @s add setoff

@@ -28,3 +28,4 @@ setblock 5000 -8 -60 minecraft:rail[shape=ascending_north]
 setblock -15 1 0 minecraft:rail[shape=south_east,waterlogged=false]
 
 kill @e[type=command_block_minecart]
+execute as @e[type=furnace_minecart,tag=guardian] run function loumardes:railrush/guardian_cart/stack_kill

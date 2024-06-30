@@ -27,10 +27,11 @@ execute as @e[type=command_block_minecart,tag=setoff,tag=red] at @s if entity @e
 execute as @e[type=command_block_minecart,tag=setoff,tag=spectator_team] at @s unless entity @e[type=marker,tag=spectator_team_crystal,distance=..7,limit=1] run function loumardes:railrush/tnt_cart/detonate
 execute as @e[type=command_block_minecart,tag=setoff,tag=spectator_team] at @s if entity @e[type=marker,tag=spectator_team_crystal,distance=..7,limit=1] run tag @s remove setoff
 
-#display particles on primed minecart (minecarts are affiched one tick behind their actual location)
+#display particles on minecarts (minecarts are affiched one tick behind their actual location)
 scoreboard players add @e[type=marker,tag=CartParticles] Process 1
 execute as @e[type=marker,tag=CartParticles] if score @s Process matches 4.. at @s run function loumardes:railrush/particles/cart_particles
 execute as @e[type=command_block_minecart, tag=TNTcart] at @s run function loumardes:railrush/particles/cart_marker
+execute as @e[type=furnace_minecart, tag=guardian] at @s run function loumardes:railrush/particles/cart_marker
 
 #Converts gold carts into iron carts
 execute as @e[type=marker,tag=RW_forge] at @s positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=command_block_minecart,tag=GoldCart,dx=0,dy=0,dz=0,limit=1] run function loumardes:railrush/ressources/forge_convert

@@ -57,3 +57,9 @@ launcher ne marche pas à coup sur
 
 redstone blocks à l'achat
 
+
+blocs avec rail posé dessus (loadestone)
+
+ajouter le gardien sur une ile flottante à mi chemin
+
+modifier les bateaux pour avoir l'escalier plus visible (accès pont inférieur ?)
